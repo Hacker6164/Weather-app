@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(img.png);
+            background-size: 100% 100%; /* Adjust as needed */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Fixed or scroll, depending on your preference */
+        }
+    </style>
+
+
+    <title>Weather Forecast</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather-App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                <form class="d-flex" role="search">
+                    <input id="city" class="form-control me-20" type="search" placeholder="Search for Weather" aria-label="Search">
+                    <button class="btn btn-outline-primary mx-10" type="submit" id="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container marketing">
+        <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
+        <div class="row justify-content-center my-4">
+            <div class="col-lg-4 justify-content-center">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Temperature Info</title>
+                    <!-- <circle cx="70" cy="70" r="70" fill="var(--bs-secondary-color)" /> -->
+                    <image href="temp.png" width="140" height="140" x="0" y="-5" />
+                </svg>
+                <h2 class="fw-normal">Temperature</h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Temperature is: <span id="temp"></span>
+                    </li>
+                    <li>Min_temperature is: <span id="min_temp"></span>
+                    </li>
+                    <li>Max_temperature is: <span id="max_temp"></span>
+                    </li>
+                    <li>Humidity is: <span id="humidity"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 justify-content-center">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Sun Info</title>
+                    <!-- <rect width="100%" height="100%" style="background-color: rgba(2, 122, 209, 0.07);"></rect> -->
+                    <image href="Sun.png" width="140" height="140" x="0" y="-5" />
+                </svg>
+                <h2 class="fw-normal">Sun Info</h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Sunrise at <span id="sunrise"></span>
+                    </li>
+                    <li>Sunset at <span id="sunset"></span>
+                    </li>
+                    <li>Feels_Like is <span id="feels_like"></span>
+                    </li>
+                </ul>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 justify-content-center">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Wind Info</title>
+                    <!-- <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect> -->
+                    <image href="wind.png" width="140" height="140" x="0" y="-5" />
+                </svg>
+                <h2 class="fw-normal">Wind Info</h2>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>cloud_pct is <span id="cloud_pct"></span>
+                    </li>
+                    <li>wind_degrees is <span id="wind_degrees"></span>
+                    </li>
+                    <li>wind_speed is <span id="wind_speed"></span>
+                    </li>
+                </ul>
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

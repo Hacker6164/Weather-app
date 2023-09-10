@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather for Hyderabad</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; /* Make columns equal in height */
+        }
+        .col {
+            flex: 1; /* Distribute available space evenly */
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        svg {
+            fill: var(--bs-secondary-color);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1; /* Allow content to grow and fill available space */
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather for Hyderabad</h1>
+        <div class="row">
+            <div class="col">
+                <svg width="140" height="140" role="img" aria-label="Placeholder">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                </svg>
+                <h2>Heading</h2>
+                <ul>
+                    <li>Temperature is <span id="temp"></span></li>
+                    <li>Min temperature is <span id="min_temp"></span></li>
+                    <li>Max temperature is <span id="max_temp"></span></li>
+                    <li>Humidity is <span id="humidity"></span></li>
+                </ul>
+            </div>
+            <div class="col">
+                <svg width="140" height="140" role="img" aria-label="Placeholder">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                </svg>
+                <h2>Heading</h2>
+                <ul>
+                    <li>Sunrise at <span id="sunrise"></span></li>
+                    <li>Sunset at <span id="sunset"></span></li>
+                    <li>Feels Like <span id="feels_like"></span></li>
+                </ul>
+            </div>
+            <div class="col">
+                <svg width="140" height="140" role="img" aria-label="Placeholder">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                </svg>
+                <h2>Heading</h2>
+                <ul>
+                    <li>Cloud Percentage <span id="cloud_pct"></span></li>
+                    <li>Wind Degrees <span id="wind_degrees"></span></li>
+                    <li>Wind Speed <span id="wind_speed"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
